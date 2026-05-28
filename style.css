@@ -1,0 +1,107 @@
+/*
+ Theme Name: Sproutouts Child Theme
+ Theme URI: https://www.sproutouts.com
+ Description: This child theme was created by Sproutouts to include key features from the Sproutouts Theme in sites built with Divi as the parent theme.
+ Author: Meagan Howey
+ Author URI: https://www.sproutouts.com
+ Template: Divi
+ Version: 1.0.0
+*/
+
+/* Classes
+-------------------------------------------------------
+
+* Background Images - -
+* sp-st-parallax: Apply a fixed background image on an element.
+
+* Menu Effects - -
+* sp-st-always-open-menu: Keep full menu on mobile devices instead of dropdown.
+* sp-st-vertical-menu: Enable vertical menu layout and keep menu open on mobile devices.
+
+* Custom Classes - -
+* sp-st-plant-divider-full: Replaces divider with custom-drawn hanging plants
+* sp-st-plant-divider-pothos: Replaces divider with custom-drawn hanging pothos plant
+* sp-st-plant-divider-string-of-hearts: Replaces divider with custom-drawn hanging string of hearts plant
+-------------------------------------------------------*/
+
+/*--Background Images--*/
+
+/*sp-st-parallax: Fixed Background Image*/
+@media only screen and (min-width: 980px) {
+  .sp-st-parallax {
+    background-attachment: fixed !important;
+  }
+}
+
+/*--Menu Effects--*/
+
+/*sp-st-always-open-menu: Keep full menu on mobile devices*/
+@media only screen and (max-width: 1200px) {
+
+  /*Keep menu open. Also applies to vertical menus*/
+	.sp-st-always-open-menu .et_pb_menu__menu, .sp-st-vertical-menu .et_pb_menu__menu {
+		display: flex !important;
+	}
+
+  /*Hide hamburger icon. Also applies to vertical menus*/
+	.sp-st-always-open-menu .et_mobile_nav_menu, .sp-st-vertical-menu .et_mobile_nav_menu {
+		display: none !important;
+	}
+}
+
+/*sp-st-vertical-menu: Enable vertical menu layout*/
+.sp-st-vertical-menu .et-menu > li {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+/*--Custom Dividers--*/
+
+.sp-st-vertical-menu .et_pb_menu__menu nav ul li {
+	display: block;
+	width: 100%;
+	margin: 10px 0;
+}
+
+/*sp-st-plant-divider-full: Replaces divider with custom-drawn hanging plants*/
+.sp-st-plant-divider-full .et_pb_top_inside_divider {
+  background-image: url("https://staging11.sproutouts.com/wp-content/uploads/2026/05/sp-st-plant-divider-full.png") !important;
+	background-size: 100% auto !important;
+	background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 500px) {
+	.sp-st-plant-divider-full .et_pb_top_inside_divider {
+    background-image: url("https://staging11.sproutouts.com/wp-content/uploads/2026/05/sp-st-plant-divider-full-mobile.png") !important;
+	}
+}
+
+/*sp-st-plant-divider-pothos: Replaces divider with custom-drawn hanging pothos plant*/
+.sp-st-plant-divider-pothos .et_pb_top_inside_divider {
+	background-image: url("https://staging11.sproutouts.com/wp-content/uploads/2026/05/sp-st-plant-divider-pothos.png") !important;
+	background-size: 100% auto !important;
+	background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 500px) {
+	.sp-st-plant-divider-pothos .et_pb_top_inside_divider {
+		background-image: url("https://staging11.sproutouts.com/wp-content/uploads/2026/05/sp-st-plant-divider-pothos-mobile.png") !important;
+		background-size: 80% auto !important;
+		background-position: top right !important;
+	}
+}
+
+/*sp-st-plant-divider-string-of-hearts: Replaces divider with custom-drawn hanging string of hearts plant*/
+.sp-st-plant-divider-string-of-hearts: .et_pb_top_inside_divider {
+	background-image: url("https://staging11.sproutouts.com/wp-content/uploads/2026/05/sp-st-plant-divider-string-of-hearts.png") !important;
+	background-size: 100% auto !important;
+	background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 500px) {
+	.sp-st-plant-divider-string-of-hearts: .et_pb_top_inside_divider {
+		background-image: url("https://staging11.sproutouts.com/wp-content/uploads/2026/05/sp-st-plant-divider-string-of-hearts-mobile.png") !important;
+		background-size: 80% auto !important;
+		background-position: top right !important;
+	}
+}
